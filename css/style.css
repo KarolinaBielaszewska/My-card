@@ -6,13 +6,29 @@ html {
     box-sizing: inherit;
 }
 
+@font-face {
+    font-family: 'Lazer84';
+    src: url('../Lazer84.ttf') format('truetype');
+}
+
+/********* animation implementation fix **********/
+
+#wrap {
+    position: absolute !important;
+    z-index: -1 !important;
+    height: 100vh !important;
+    width: 100vw !important;
+}
+
+/********* animation implementation fix **********/
+
 body {
     margin: 16px;
     background: #2C2141;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -27,6 +43,8 @@ body {
 }
 
 .card__article {
+    display: flex;
+    flex-direction: column;
     flex-basis: 380px;
     flex-grow: 1;
 }
@@ -38,6 +56,35 @@ body {
     height: 148px;
     width: 148px;
     object-fit: cover;
+    filter: blur(10px);
+}
+
+.card__wtf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fixed__hight {
+    height: 34px;
+}
+
+.card__wtf--hover {
+    display: none;
+    font-family: lazer84;
+    margin: 0 32px 0 0;
+    font-size: 30px;
+    letter-spacing: .5rem;
+    color: #f9c802;
+    text-shadow: 2px 2px 0 #e30613;
+}
+
+.card__photo:hover+.fixed__hight>.card__wtf--hover {
+    display: block;
+}
+
+.card__photo:hover {
+    filter: blur(0px);
 }
 
 .card__header {

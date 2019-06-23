@@ -7,12 +7,24 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="card">
-        <img class="card__photo" src="img/minion.gif" alt="Minionek rozbijający się o ekran">
+
+        <div class="card__wtf">
+            <img class="card__photo" src="img/minion.gif" alt="Minionek rozbijający się o ekran">
+
+            <div class="fixed__hight">
+
+                <p class="card__wtf--hover">WTF</p>
+
+            </div>
+        </div>
+
+
         <article class="card__article">
             <header class="card__header">
                 <h1 class="card__header--title">Karolina Bielaszewska</h1>
@@ -25,13 +37,19 @@
             </p>
             <footer class="card__footer">
                 W sieci:
-                <a class="card__footer--link" href="#">Facebook</a>
-                <a class="card__footer--link" href="#">GitHub</a>
-                <a class="card__footer--link" href="#">LinkedIn</a>
+                <a class="card__footer--link" href="https://www.facebook.com/" target="_blank">Facebook</a>
+                <a class="card__footer--link" href="https://github.com/KarolinaBielaszewska" target="_blank">GitHub</a>
+                <a class="card__footer--link" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
 
             </footer>
         </article>
     </div>
+    <div id="wrap"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="animation.js"></script>
+
 </body>
 
 </html>
